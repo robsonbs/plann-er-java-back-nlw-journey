@@ -2,6 +2,10 @@ package br.dev.robsonsouza.planner.dto;
 
 import java.util.List;
 
-public record TripRequestPayload(String destination, String starts_at, String ends_at,
-                                 List<String> emails_to_invite, String owner_email,
-                                 String owner_name) {}
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public record TripRequestPayload(String destination, @JsonProperty("starts_at") String startsAt,
+                                 @JsonProperty("ends_at") String endsAt,
+                                 @JsonProperty("emails_to_invite") List<String> emailsToInvite,
+                                 @JsonProperty("owner_email") String ownerEmail,
+                                 @JsonProperty("owner_name") String ownerName) {}
