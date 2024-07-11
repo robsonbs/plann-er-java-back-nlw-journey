@@ -25,11 +25,10 @@ public class ParticipantService {
         participants.forEach(participant -> System.out.println(participant.getId()));
     }
     
-    public ParticipantCreateResponse registerParticipantToEvent(String email, Trip trip) {
+    public ParticipantCreateResponse registerParticipantToTrip(String email, Trip trip) {
         
         Participant participant = new Participant(email, trip);
         this.repository.saveAndFlush(participant);
-        System.out.println(participant.getId());
         return new ParticipantCreateResponse(participant.getId());
     }
     

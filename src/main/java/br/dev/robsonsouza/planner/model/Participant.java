@@ -2,6 +2,7 @@ package br.dev.robsonsouza.planner.model;
 
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +15,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity(name = "participants")
-@AllArgsConstructor
 @Data
 @NoArgsConstructor
 public class Participant {
@@ -30,8 +30,9 @@ public class Participant {
     @ManyToOne
     @JoinColumn(name = "trip_id", nullable = false)
     private Trip trip;
-    @Column(insertable = false, updatable = false)
-    private UUID trip_id;
+    @Column(name="trip_id", insertable = false, updatable = false)
+    @JsonProperty("trip_id")
+    private UUID tripId;
     
     public Participant(String email, Trip trip) {
         this.name = "";

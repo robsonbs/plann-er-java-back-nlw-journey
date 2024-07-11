@@ -11,13 +11,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity(name = "trips")
-@AllArgsConstructor
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Trip {
     
@@ -40,7 +40,7 @@ public class Trip {
     private LocalDateTime endsAt;
     @JsonProperty("is_confirmed")
     @Column(nullable = false, name = "is_confirmed")
-    private Boolean isConfimed;
+    private boolean isConfirmed;
     
     public Trip(TripRequestPayload data) {
         this.destination = data.destination();
@@ -48,6 +48,6 @@ public class Trip {
         this.ownerEmail = data.ownerEmail();
         this.startsAt = LocalDateTime.parse(data.startsAt(), DateTimeFormatter.ISO_DATE_TIME);
         this.endsAt = LocalDateTime.parse(data.endsAt(), DateTimeFormatter.ISO_DATE_TIME);
-        this.isConfimed = false;
+        this.isConfirmed = false;
     }
 }
