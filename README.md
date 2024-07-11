@@ -16,7 +16,12 @@
 	🚧  Planner # NLW (Trilha Java)🚀 Em Desenvolvimento  🚧
 </h4>
 
+<div style="margin:0 auto; width: 1000px;"><img src="imgs/trip-controller.png" style="width: 48%;display: inline-block" alt="TripController.java">
+<img src="imgs/http-requests.png" style="width: 48%;display: inline-block" alt="Requisições HTTP">
+</div>
+
 ## 🚀 Sobre o projeto
+
 <p>
 Projeto Desenvolvido ao longo da 16ª NLW, <b>Journey</b>, onde foi desenvolvido o projeto Plann.er tem como objetivo 
 ajudar o usuário a organizar viagens a trabalho ou lazer. O usuário pode criar uma viagem com nome,
@@ -25,11 +30,13 @@ Dentro da viagem o usuário pode planejar as atividades para realizar em cada di
 </p>
 
 ---
+
 ## 🚀 Como executar o projeto
 
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+
 - [Git](https://git-scm.com)
 - [JDK 21](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)
 - [Maven](https://maven.apache.org/download.cgi)
@@ -54,6 +61,7 @@ $ ./mvnw test
 ```
 
 ### 🛠 Tecnologias
+
 - [Java21](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)
 - [Maven](https://maven.apache.org/download.cgi)
 - [Spring Boot](https://spring.io/projects/spring-boot)
@@ -63,8 +71,8 @@ $ ./mvnw test
 - [DevTools](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-devtools)
 - [Sping Web](https://spring.io/guides/gs/serving-web-content/)
 - [Postman](https://www.postman.com/)
----
 
+---
 
 ## 👩‍💻 Autor
 
